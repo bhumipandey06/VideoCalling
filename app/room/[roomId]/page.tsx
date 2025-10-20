@@ -54,14 +54,32 @@ const Page = () => {
     }
     containerRef.current.innerHTML = ""; // cleanup old content
     myMeeting(containerRef.current);
-  }, []);
+  },[]);
 
   return (
-    <div
-      style={{ height: '100vh', width: '100vw' }}
-      ref={containerRef}
-    />
+    <div className="flex flex-col h-screen w-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* Header */}
+      <header className="flex items-center justify-between px-6 py-3 bg-slate-800/70 backdrop-blur-md shadow-lg">
+        <h1 className="text-xl font-semibold tracking-wide">💬 Video Call</h1>
+        <span className="text-sm text-gray-300">
+          Room: <span className="font-mono">{roomId}</span>
+        </span>
+      </header>
+
+      {/* Video Container */}
+      <div
+        ref={containerRef}
+        className="flex-1 m-4 rounded-xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-950/40 relative"
+      />
+
+      {/* Footer */}
+      <footer className="py-2 text-center text-xs text-gray-500 border-t border-slate-700">
+        Powered by <span className="text-blue-400 font-medium">BP</span>
+      </footer>
+    </div>
   );
+  
+  
 };
 
 export default Page;

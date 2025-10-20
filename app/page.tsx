@@ -12,16 +12,16 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md text-center">
-        <h1 className="text-2xl font-semibold text-gray-800 mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="bg-gray-800 shadow-lg rounded-xl p-8 w-full max-w-md text-center border border-gray-700">
+        <h1 className="text-2xl font-semibold text-white mb-6">
           Join a Meeting
         </h1>
         <input
           type="text"
           placeholder="Enter Meeting ID"
           ref={roomId}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none mb-4 text-gray-700"
+          className="w-full px-4 py-2 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none mb-4 bg-gray-700 text-white placeholder-gray-400 transition"
         />
         <button
           type="submit"
@@ -33,4 +33,6 @@ export default function Home() {
       </div>
     </div>
   );
+  
+  
 }
